@@ -737,7 +737,7 @@
             <div class="col-md-10">
               <div class="card-body bodyHover loveAgainCard">
                 <h5 id="fontSize" class="card-title ml-4">Bohemian Rhapsody</h5>
-                <h6 class="card-title ml-3"><i class="fas fa-play-circle playHover"></i></h6>
+                <h6 class="card-title ml-3"><i class="fas fa-play-circle playHover" onclick="toAlbumPage()" ></i></h6>
                 <!-- test - create button here -->
               </div>
             </div>
@@ -754,8 +754,36 @@
             <div class="col-md-10">
               <div class="card-body bodyHover loveAgainCard">
                 <h5 id="fontSize" class="card-title ml-4">The Days / The Nights </h5>
-                <h6 class="card-title ml-3"><i class="fas fa-play-circle playHover" onclick="searchAlbum(9188269)"></i></h6>
-                <!-- test - create button here -->
+                <h6 class="card-title ml-3">
+                  <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary m-0 p-0" data-toggle="modal" data-target="#exampleModal">
+                <i class="fas fa-play-circle playHover" onclick="searchAlbum(9188269)"></i></h6>
+              </button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Tracks</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body playAlbumAvicii">
+        <ul>
+
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+                
+                  <!-- test - create button here -->
               </div>
             </div>
           </div>
@@ -771,7 +799,7 @@
             <div class="col-md-10">
               <div class="card-body bodyHover loveAgainCard">
                 <h5 id="fontSize" class="card-title ml-4">Recovery</h5>
-                <h6 class="card-title ml-3"><i class="fas fa-play-circle playHover"></i></h6>
+                <h6 class="card-title ml-3"><i class="fas fa-play-circle playHover playAlbum"></i></h6>
                 <!-- test - create button here -->
               </div>
             </div>

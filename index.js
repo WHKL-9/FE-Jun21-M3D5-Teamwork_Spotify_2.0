@@ -155,6 +155,8 @@ window.onload=() =>{
     })
 }
 
+
+
 function displayAlbum(tracks){
   //targeting the album tracklist 
   let getAlbumContainer = document.querySelector(".album-list")
@@ -172,6 +174,8 @@ function displayAlbum(tracks){
 }
 
 //perform album search 
+
+
 function searchAlbum (desiredAlbum){
    fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${desiredAlbum}`, {
     method: "GET", 
@@ -179,11 +183,34 @@ function searchAlbum (desiredAlbum){
   }).then((response) =>{
     return response.json()
   }).then(album => {
-    console.log(album)
-    // displayAlbum(album.tracks.data)
+    // console.log(album)
+    displaySpecificAlbum(album.tracks.data)
   }).catch(error =>{
       console.error(error)
     })
 }
+
+function displaySpecificAlbum(tracks){
+  //targeting the play hover button in index.html
+  let getPlayButton = document.querySelector(".playAlbumAvicii ul")
+  tracks.forEach(track=>{
+    getPlayButton.innerHTML +=
+    `<li>${track.title}</li>`
+  })
+ 
+}
+
+function toAlbumPage(){
+  window.open("http://127.0.0.1:5500/album.html")
+}
+
+
+
+
+
+
+
+
+
 
 
