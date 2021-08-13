@@ -123,3 +123,67 @@ function createNewCard () {
     //append new card into parent's container
     goodMorningCardContainer.appendChild(outermostDiv)
 }
+
+
+// album page js 
+
+// function fetchAlbum(){
+//   fetch("https://striveschool-api.herokuapp.com/api/deezer/album/75621062", {
+//     method: "GET", 
+
+//   }).then((response) =>{
+//     return response.json()
+//   }).then(album => {
+//     console.log(album)
+//     displayAlbum(album.tracks.data)
+//   }).catch(error =>{
+//       console.error(error)
+//     })
+// }
+
+window.onload=() =>{
+  fetch("https://striveschool-api.herokuapp.com/api/deezer/album/75621062", {
+    method: "GET", 
+
+  }).then((response) =>{
+    return response.json()
+  }).then(album => {
+    console.log(album)
+    displayAlbum(album.tracks.data)
+  }).catch(error =>{
+      console.error(error)
+    })
+}
+
+function displayAlbum(tracks){
+  //targeting the album tracklist 
+  let getAlbumContainer = document.querySelector(".album-list")
+  //looping through the tracklist and add them
+  
+  for (track of tracks){
+    getAlbumContainer.innerHTML +=
+    `<tr id="${track.id}">
+    <th scope="row">+</th>
+    <td colspan="2">${track.title}</td>
+    <td>${track.duration}</td>
+    </tr>`
+  }
+  
+}
+
+//perform album search 
+function searchAlbum (desiredAlbum){
+   fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${desiredAlbum}`, {
+    method: "GET", 
+
+  }).then((response) =>{
+    return response.json()
+  }).then(album => {
+    console.log(album)
+    // displayAlbum(album.tracks.data)
+  }).catch(error =>{
+      console.error(error)
+    })
+}
+
+

@@ -587,6 +587,8 @@ progress {
   color: #1c9cea;
 }
 
+
+
 .fa-check {
   font-size: 0.4rem;
   position: absolute;
@@ -1060,6 +1062,14 @@ td:hover {
   border: 1px solid black;
 } */
 
+<<<<<<< Updated upstream
 .table td{
   color: white;
 }
+=======
+
+/* .album-search-form{
+  border: 1.5px solid white;
+  border-radius: 5px;
+} */
+>>>>>>> Stashed changes
