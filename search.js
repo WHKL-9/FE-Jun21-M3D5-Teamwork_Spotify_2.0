@@ -1,9 +1,9 @@
 function performSearch() {
-  //let getSearchValueHere = document.querySelector("input").value;
-  // console.log(getSearchValueHere)
+  let getSearchValueHere = document.querySelector(".user_search").value;
+  console.log(getSearchValueHere)
 
    fetch(
-        `https://striveschool-api.herokuapp.com/api/deezer/search?q=${this.value}`,
+        `https://striveschool-api.herokuapp.com/api/deezer/search?q=${getSearchValueHere}`,
         {
             method: "GET",
         }
