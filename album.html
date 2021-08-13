@@ -63,9 +63,9 @@
                             </li>
                             <!-- search icon and text -->
                             <li class="nav-item">
-                                
+
                                 <a class="nav-link" href="#">
-                                  <i class="fas fa-search"></i>
+                                  <i class="fas fa-search searchhere" onclick="performSearch()"></i>
                                     Search
                                 </a>
                             </li>
@@ -274,11 +274,13 @@
                 <div class="row">
                   <a href="#" class="previous round">&#8249;</a>
                   <a href="#" class="next round">&#8250;</a>
-
+                  
                   <div
                     class="dropdown d-flex justify-content-end"
                     style="margin-top: 10px"
                   >
+                  <input type="text"class ="form-control input" placeholder="....SEARCH" onclick="performSearch(this.value)">
+                
                     <button
                       class="btn btn-dark badge-pill dropdown-toggle"
                       type="button"
@@ -293,6 +295,7 @@
                       />
                       Username
                     </button>
+                    
                     <div
                       class="dropdown-menu bg-dark"
                       aria-labelledby="dropdownMenu2"
@@ -315,6 +318,7 @@
                       </button>
                      <button onclick="location.href='login.html'" class="dropdown-item text-white" type="button">Log out</button>
                     </div>
+                   
                   </div>
                 </div>
                 <div class="row" id="image-align">
@@ -596,6 +600,7 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
+    <script src="/search.js"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
