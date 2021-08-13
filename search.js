@@ -30,7 +30,7 @@ function performSearch() {
         let searchResults = document.querySelector(".modal-body")
         for(list of result)
         {
-            searchResults.innerHTML += `<div class="card mb-5 bg-dark">
+            searchResults.innerHTML += `<div class="card mb-5">
             <img src="${list.album.cover_medium}" class="card-img-top" alt="album">
             <div class="card-body">
               <h5 class="card-title">${list.album.title}</h5>
