@@ -1059,3 +1059,7 @@ td:hover {
   background-color: red;
   border: 1px solid black;
 } */
+
+.table td{
+  color: white;
+}
