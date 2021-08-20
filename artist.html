@@ -287,7 +287,15 @@ window.onclick = function(event) {
     console.log(json.tracks)
     document.getElementById('myModal').src = json;
   });
- </script>
+  function appendData(json) {
+            var mainContainer = document.getElementById("myModal");
+            for (var i = 0; i < json.length; i++) {
+                var myModal = document.createElement("myModal");
+                myModal.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName;
+                mainContainer.appendChild(myModal);
+            }
+        }
+   </script>
 
                   <div class="card card mx-2" style='width: 15%'>
                     <img src="https://i.scdn.co/image/ab67616d00001e0250bd47cf6d44bddcd546a951" class="card-img-top" alt="...">
